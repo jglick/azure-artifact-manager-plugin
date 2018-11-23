@@ -10,6 +10,7 @@ import hudson.model.Run;
 import jenkins.model.ArtifactManager;
 import jenkins.model.ArtifactManagerFactory;
 import jenkins.model.ArtifactManagerFactoryDescriptor;
+import org.jenkinsci.Symbol;
 import org.kohsuke.accmod.Restricted;
 import org.kohsuke.accmod.restrictions.NoExternalUse;
 import org.kohsuke.stapler.DataBoundConstructor;
@@ -39,6 +40,7 @@ public class AzureArtifactManagerFactory extends ArtifactManagerFactory {
         return new AzureArtifactManager(build,Utils.getArtifactConfig());
     }
 
+    @Symbol("azure")
     @Extension
     public static final class DescriptorImpl extends ArtifactManagerFactoryDescriptor {
 

@@ -1,0 +1,28 @@
+#credentials:
+#  system:
+#    domainCredentials:
+#      - credentials:
+#          - azure:
+#              blobEndpointURL: "http://blob.core.windows.net/"
+#              description: "Blob store for artifacts"
+#              id: "blob-store"
+#              scope: GLOBAL
+#              storageAccountName: "accountname"
+#              storageKey: "thekey"
+#unclassified:
+#artifactManager:
+#  artifactManagerFactories:
+#  - azure:
+#      config:
+#        container: "builds"
+#        storageCredentialId: "blob-store"
+credentials:
+  system:
+    domainCredentials:
+      credentials:
+      - certificate:
+          scope: SYSTEM
+          id: ssh_private_key
+          keyStoreSource:
+            fileOnMaster:
+              keyStoreFile: /docker/secret/id_rsa

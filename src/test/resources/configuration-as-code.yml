@@ -1,0 +1,10 @@
+---
+unclassified:
+  azure:
+    container: "test"
+    prefix: "hello/"
+    storageCredentialId: "id"
+  artifactManager:
+    artifactManagerFactories:
+      - azureFactory:
+          config: azure
